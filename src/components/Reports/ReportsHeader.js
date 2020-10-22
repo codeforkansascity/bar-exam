@@ -19,36 +19,28 @@ const Header = (props) => {
     <Grid container spacing={5}>
       <Grid item xs={6} md={4}>
         <Paper className={classes.paper}>
-          <Box>
-            <Typography variant="h6">
-              Hello Alexander, here are your reports!
-            </Typography>
-          </Box>
+          <Typography variant="h6">
+            Hello Alexander, here are your reports!
+          </Typography>
         </Paper>
       </Grid>
+
       <Grid
         container
-        item
         md={8}
         direction="row"
-        justify="space-between"
-        alignItems="center"
+        justify="space-around"
+        alignItems="flex-end"
       >
-        <Grid item>
-          <Button className={classes.button} variant="contained">
-            DAY
-          </Button>
-        </Grid>
-        <Grid item>
-          <Button className={classes.button} variant="contained">
-            WEEK
-          </Button>
-        </Grid>
-        <Grid item>
-          <Button className={classes.button} variant="contained">
-            MONTH
-          </Button>
-        </Grid>
+        <Button className={classes.button} variant="contained">
+          DAY
+        </Button>
+        <Button className={classes.button} variant="contained">
+          WEEK
+        </Button>
+        <Button className={classes.button} variant="contained">
+          MONTH
+        </Button>
       </Grid>
     </Grid>
   );

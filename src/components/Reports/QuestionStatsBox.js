@@ -5,8 +5,9 @@ import { Paper, Box, Typography } from '@material-ui/core';
 const useStyles = makeStyles((theme) => ({
   paper: {
     height: 200,
-    width: 200,
+    width: '95%',
     textAlign: 'center',
+    margin: 'auto',
     color: '#D9B448',
   },
 }));

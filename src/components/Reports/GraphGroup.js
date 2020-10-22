@@ -9,8 +9,8 @@ const skeletonSize = 180;
 const useStyles = makeStyles((theme) => ({
   paper: {
     height: 200,
-    width: 200,
-    textAlign: 'center',
+    width: '100%',
+    margin: 'auto',
     color: '#D9B448',
   },
 }));
@@ -25,7 +25,6 @@ const GraphGroup = (props) => {
           <Paper className={classes.paper}>
             <Box p={1}>
               <Skeleton
-                animation="false"
                 variant="circle"
                 width={skeletonSize}
                 height={skeletonSize}
@@ -45,7 +44,7 @@ const GraphGroup = (props) => {
           </Paper>
         </Grid>
         <Grid item xs={12} md={12}>
-          <Paper className={classes.paper} style={{ width: '400px' }}>
+          <Paper className={classes.paper} style={{ width: '100%' }}>
             <Box p={1}>
               <Skeleton
                 variant="rect"
