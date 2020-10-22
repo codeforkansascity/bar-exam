@@ -7,7 +7,7 @@ import NavigationSideBar from './components/NavigationSideBar/NavigationSideBar'
 
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Container from '@material-ui/core/Container';
-import { Grid, Paper, Box } from '@material-ui/core';
+import { Grid, Paper, Box, Hidden } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -24,13 +24,15 @@ const App = (props) => {
       <CssBaseline />
       <Container maxWidth="lg">
         <Grid container spacing={3}>
-          <Grid item xs={12} md={3}>
-            <Paper className={classes.paper}>
-              {/* Navigation Side Bar Here */}
-              <NavigationSideBar />
-            </Paper>
-          </Grid>
-          <Grid item xs={12} md={9}>
+          <Hidden smDown>
+            <Grid item xs={3} md={3}>
+              <Paper className={classes.paper}>
+                {/* Navigation Side Bar Here */}
+                <NavigationSideBar />
+              </Paper>
+            </Grid>
+          </Hidden>
+          <Grid item xs={12} sm={12} md={9}>
             <Paper className={classes.paper}>
               {/* Main Body of App here */}
               <ReportsPage />

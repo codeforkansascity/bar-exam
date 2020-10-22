@@ -21,6 +21,11 @@ const GraphGroup = (props) => {
   return (
     <Box p={2}>
       <Grid container spacing={3}>
+        <Grid item xs={12}>
+          <Typography variant="h4" align="center">
+            Usage Graphs
+          </Typography>
+        </Grid>
         <Grid item xs={12} md={6}>
           <Paper className={classes.paper}>
             <Box p={1} align="center">
@@ -46,11 +51,7 @@ const GraphGroup = (props) => {
         <Grid item xs={12} md={12}>
           <Paper className={classes.paper} style={{ width: '100%' }}>
             <Box p={1} align="center">
-              <Skeleton
-                variant="rect"
-                width={skeletonSize * 2}
-                height={skeletonSize}
-              />
+              <Skeleton variant="rect" width="100%" height={skeletonSize} />
             </Box>
           </Paper>
         </Grid>

@@ -8,6 +8,7 @@ const useStyles = makeStyles((theme) => ({
     width: '95%',
     textAlign: 'center',
     margin: 'auto',
+    padding: '3px',
     color: '#D9B448',
   },
 }));
@@ -15,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
 const QuestionStatsBox = (props) => {
   const classes = useStyles();
   return (
-    <Box>
+    <Box p={2}>
       <Paper className={classes.paper}>
         <h3>Average Questions {props.type} in a week</h3>
         <Typography variant="h1">{props.number}</Typography>

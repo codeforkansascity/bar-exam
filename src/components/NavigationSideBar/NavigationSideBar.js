@@ -7,16 +7,21 @@ import Skeleton from '@material-ui/lab/Skeleton';
 const useStyles = makeStyles((theme) => ({
   button: {
     backgroundColor: '#71D98B',
-    color: 'white',
+
     margin: '5px',
     border: '3px solid white',
   },
   body: {
     backgroundColor: '#3E7E8C',
+    padding: '10px',
   },
   paper: {
     width: '90%',
     margin: 'auto',
+  },
+  text: {
+    color: 'white',
+    textAlign: 'center',
   },
 }));
 
@@ -36,9 +41,11 @@ const NavigationSideBar = (props) => {
           </Paper>
         </Box>
       </Grid>
-      <Typography variant="h5" style={{ color: 'white' }}>
-        Welcome!
-      </Typography>
+      <Box p={2}>
+        <Typography variant="h5" className={classes.text}>
+          Welcome!
+        </Typography>
+      </Box>
       <Button className={classes.button} fullWidth={true}>
         Profile
       </Button>
@@ -51,7 +58,9 @@ const NavigationSideBar = (props) => {
       <Button className={classes.button} fullWidth={true}>
         Reports
       </Button>
+
       <br></br>
+
       <Button className={classes.button} fullWidth={true}>
         Settings
       </Button>

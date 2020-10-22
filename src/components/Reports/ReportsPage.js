@@ -11,6 +11,7 @@ import ReportsHeader from './ReportsHeader';
 const useStyles = makeStyles((theme) => ({
   paper: {
     backgroundColor: '#3E7E8C',
+    padding: '10px',
   },
   body: {
     paddingTop: '15px',
@@ -22,22 +23,28 @@ const ReportsPage = (props) => {
 
   return (
     <Grid container spacing={3} className={classes.body}>
-      <Grid item sm={12}>
-        <ReportsHeader />
+      <Grid item xs={12}>
+        <Box p={2}>
+          <ReportsHeader username="Alexander" />
+        </Box>
       </Grid>
-      <Grid item xs={12} md={4}>
+      <Grid item xs={6} md={4}>
         <Box p={2}>
           <Paper className={classes.paper}>
-            Question Stats Boxes Here
+            {/* Question Stats Boxes Here */}
             <QuestionStatsBox type="answered" number="3" />
+
             <QuestionStatsBox type="graded" number="8" />
           </Paper>
         </Box>
       </Grid>
-      <Grid item xs={12} md={8}>
+      <Grid item xs={6} md={8}>
         <Box p={2}>
-          <Paper>Graph Components Here</Paper>
-          <GraphGroup />
+          <Paper>
+            {/* Graph Components Here */}
+
+            <GraphGroup />
+          </Paper>
         </Box>
       </Grid>
     </Grid>
