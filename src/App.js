@@ -3,7 +3,6 @@ import { makeStyles } from '@material-ui/core/styles';
 
 // Components
 import ReportsPage from './components/Reports/ReportsPage';
-import Header from './components/Reports/ReportsHeader';
 import NavigationSideBar from './components/NavigationSideBar/NavigationSideBar';
 
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -27,14 +26,13 @@ const App = (props) => {
         <Grid container spacing={3}>
           <Grid item xs={12} md={3}>
             <Paper className={classes.paper}>
-              Navigation Side Bar Here
+              {/* Navigation Side Bar Here */}
               <NavigationSideBar />
             </Paper>
           </Grid>
           <Grid item xs={12} md={9}>
             <Paper className={classes.paper}>
-              Main Body of App here
-              <Header />
+              {/* Main Body of App here */}
               <ReportsPage />
             </Paper>
           </Grid>

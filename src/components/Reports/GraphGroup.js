@@ -23,7 +23,7 @@ const GraphGroup = (props) => {
       <Grid container spacing={3}>
         <Grid item xs={12} md={6}>
           <Paper className={classes.paper}>
-            <Box p={1}>
+            <Box p={1} align="center">
               <Skeleton
                 variant="circle"
                 width={skeletonSize}
@@ -34,7 +34,7 @@ const GraphGroup = (props) => {
         </Grid>
         <Grid item xs={12} md={6}>
           <Paper className={classes.paper}>
-            <Box p={1}>
+            <Box p={1} align="center">
               <Skeleton
                 variant="rect"
                 width={skeletonSize}
@@ -45,7 +45,7 @@ const GraphGroup = (props) => {
         </Grid>
         <Grid item xs={12} md={12}>
           <Paper className={classes.paper} style={{ width: '100%' }}>
-            <Box p={1}>
+            <Box p={1} align="center">
               <Skeleton
                 variant="rect"
                 width={skeletonSize * 2}
