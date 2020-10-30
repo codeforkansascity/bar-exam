@@ -7,6 +7,9 @@ import { Grid, Paper, Box } from '@material-ui/core';
 import QuestionStatsBox from './QuestionStatsBox';
 import GraphGroup from './GraphGroup';
 import ReportsHeader from './ReportsHeader';
+import PieChart from '../../components/PieChart';
+import LineGraph from '../../components/LineGraph';
+import BarChart from '../../components/BarChart';
 
 const useStyles = makeStyles((theme) => ({
   paper: {

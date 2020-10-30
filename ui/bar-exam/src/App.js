@@ -8,14 +8,14 @@ import Container from '@material-ui/core/Container';
 import { Grid, Paper, Hidden } from '@material-ui/core';
 
 // Components
-import ReportsPage from './components/Reports/ReportsPage';
-import Profile from './components/Profile/Profile';
 import NavigationSideBar from './components/NavigationSideBar/NavigationSideBar';
-import Insights from './components/Insights/Insights';
-import MyTasks from './components/MyTasks/MyTasks';
-import Settings from './components/Settings/Settings';
-import TroubleShoot from './components/TroubleShoot/TroubleShoot';
-import Admin from './components/Admin/Admin';
+import ReportsPage from './views/Reports/ReportsPage';
+import Profile from './views/Profile/Profile';
+import Insights from './views/Insights/Insights';
+import MyTasks from './views/MyTasks/MyTasks';
+import Settings from './views/Settings/Settings';
+import TroubleShoot from './views/TroubleShoot/TroubleShoot';
+import Admin from './views/Admin/Admin';
 
 //
 

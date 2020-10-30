@@ -4,9 +4,11 @@ import { Grid, Paper, Box, Typography } from '@material-ui/core';
 
 const Profile = (props) => {
   return (
-    <Box>
-      <Typography variant="h1"> This is the Profile component </Typography>
-    </Box>
+    <Paper>
+      <Box>
+        <Typography variant="h1"> This is the Profile component </Typography>
+      </Box>
+    </Paper>
   );
 };
 
