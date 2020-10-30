@@ -4,6 +4,9 @@ import { makeStyles } from '@material-ui/core/styles';
 import { Grid, Paper, Box, Typography } from '@material-ui/core';
 import Skeleton from '@material-ui/lab/Skeleton';
 
+// Chartjs-2
+import { Pie } from '@reactchartjs/react-chart.js';
+
 const skeletonSize = 180;
 
 const useStyles = makeStyles((theme) => ({
@@ -14,6 +17,31 @@ const useStyles = makeStyles((theme) => ({
     color: '#D9B448',
   },
 }));
+
+const data = {
+  labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple'],
+  datasets: [
+    {
+      label: '# of Votes',
+      data: [12, 19, 3, 5, 2],
+      backgroundColor: [
+        'rgba(255, 99, 132, 0.2)',
+        'rgba(54, 162, 235, 0.2)',
+        'rgba(255, 206, 86, 0.2)',
+        'rgba(75, 192, 192, 0.2)',
+        'rgba(153, 102, 255, 0.2)',
+      ],
+      borderColor: [
+        'rgba(255, 99, 132, 1)',
+        'rgba(54, 162, 235, 1)',
+        'rgba(255, 206, 86, 1)',
+        'rgba(75, 192, 192, 1)',
+        'rgba(153, 102, 255, 1)',
+      ],
+      borderWidth: 1,
+    },
+  ],
+};
 
 const GraphGroup = (props) => {
   const classes = useStyles();
@@ -29,11 +57,12 @@ const GraphGroup = (props) => {
         <Grid item xs={12} md={6}>
           <Paper className={classes.paper}>
             <Box p={1} align="center">
-              <Skeleton
+              <Pie width="100%" data={data} />
+              {/* <Skeleton
                 variant="circle"
                 width={skeletonSize}
                 height={skeletonSize}
-              />
+              /> */}
             </Box>
           </Paper>
         </Grid>

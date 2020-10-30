@@ -25,7 +25,7 @@ const App = (props) => {
       <Container maxWidth="lg">
         <Grid container spacing={3}>
           <Hidden smDown>
-            <Grid item xs={3} md={3}>
+            <Grid item xs={3} sm={3} md={3}>
               <Paper className={classes.paper}>
                 {/* Navigation Side Bar Here */}
                 <NavigationSideBar />
