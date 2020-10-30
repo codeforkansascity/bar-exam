@@ -2,12 +2,9 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 
 import { Grid, Paper, Box, Typography } from '@material-ui/core';
-import Skeleton from '@material-ui/lab/Skeleton';
 
 // Chartjs-2
 import { Pie, HorizontalBar, Line } from '@reactchartjs/react-chart.js';
-
-const skeletonSize = 180;
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -18,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const dataPie = {
+const data = {
   labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple'],
   datasets: [
     {
@@ -26,9 +23,9 @@ const dataPie = {
       data: [12, 19, 3, 5, 2],
       backgroundColor: [
         'rgba(255, 99, 132, 0.2)',
-        'rgba(54, 162, 235, 0.2)',
-        'rgba(255, 206, 86, 0.2)',
-        'rgba(75, 192, 192, 0.2)',
+        '#3E7E8C',
+        '#D9B448',
+        '#71D98B',
         'rgba(153, 102, 255, 0.2)',
       ],
       borderColor: [
@@ -43,32 +40,6 @@ const dataPie = {
   ],
 };
 // ***************
-const dataBar1 = {
-  labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-  datasets: [
-    {
-      label: '# of Votes',
-      data: [12, 19, 3, 5, 2, 3],
-      backgroundColor: [
-        'rgba(255, 99, 132, 0.2)',
-        'rgba(54, 162, 235, 0.2)',
-        'rgba(255, 206, 86, 0.2)',
-        'rgba(75, 192, 192, 0.2)',
-        'rgba(153, 102, 255, 0.2)',
-        'rgba(255, 159, 64, 0.2)',
-      ],
-      borderColor: [
-        'rgba(255, 99, 132, 1)',
-        'rgba(54, 162, 235, 1)',
-        'rgba(255, 206, 86, 1)',
-        'rgba(75, 192, 192, 1)',
-        'rgba(153, 102, 255, 1)',
-        'rgba(255, 159, 64, 1)',
-      ],
-      borderWidth: 1,
-    },
-  ],
-};
 
 const bar_1_options = {
   scales: {
@@ -142,23 +113,19 @@ const GraphGroup = (props) => {
         <Grid item xs={12} md={6}>
           <Paper className={classes.paper}>
             <Box p={1} align="center">
-              <Pie width="100%" data={dataPie} />
+              <Pie width="100%" data={data} />
             </Box>
           </Paper>
         </Grid>
         <Grid item xs={12} md={6}>
           <Paper className={classes.paper}>
             <Box p={1} align="center">
-              <HorizontalBar
-                data={dataBar1}
-                options={bar_1_options}
-                width="100%"
-              />
+              <HorizontalBar data={data} options={bar_1_options} width="100%" />
             </Box>
           </Paper>
         </Grid>
         <Grid item xs={12} md={12}>
-          <Paper className={classes.paper} style={{ width: '100%' }}>
+          <Paper className={classes.paper} style={{ height: '100%' }}>
             <Box p={1} align="center">
               <Line data={dataLine} options={line_options} />
             </Box>

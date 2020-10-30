@@ -5,7 +5,7 @@ import { Paper, Box, Typography } from '@material-ui/core';
 const useStyles = makeStyles((theme) => ({
   paper: {
     height: 200,
-    width: '95%',
+    width: '100%',
     textAlign: 'center',
     margin: 'auto',
     padding: '3px',
